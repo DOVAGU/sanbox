@@ -1,5 +1,6 @@
-text="1922 Gibson L-5 CES for about $16,035!"
-print(text.upper())
-
-for i in range(0,201,50):
-    print("{0}".format(i))
+word_to_count = {}
+for word in words:
+    if word in word_to_count:
+        word_to_count[word] += 1
+    else:
+        word_to_count[word] = 1
