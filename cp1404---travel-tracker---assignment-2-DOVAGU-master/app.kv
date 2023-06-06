@@ -1,0 +1,35 @@
+BoxLayout:
+    orientation: 'horizontal'
+
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: 0.3
+
+        Spinner:
+            id: spinner
+            text: 'Sort by'
+            values: 'name', 'country', 'priority'
+
+        BoxLayout:
+            orientation: 'vertical'
+            TextInput:
+                id: name_input
+                hint_text: 'Name'
+            TextInput:
+                id: country_input
+                hint_text: 'Country'
+            TextInput:
+                id: priority_input
+                hint_text: 'Priority'
+            Button:
+                text: 'Add Place'
+                on_release: app.add_place()
+
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: 0.7
+        id: places_container
+
+    Label:
+        text: app.status_label
+
